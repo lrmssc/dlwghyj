@@ -1,0 +1,1 @@
+////  LevelLose.h//  dianliwangguomanyouji////  Created by szsycx on 3/17/15.////#ifndef __dianliwangguomanyouji__LevelLose__#define __dianliwangguomanyouji__LevelLose__#include "cocos2d.h"USING_NS_CC;class LevelLose :public Layer{public:            virtual bool init();    CREATE_FUNC(LevelLose);    };#endif /* defined(__dianliwangguomanyouji__LevelLose__) */

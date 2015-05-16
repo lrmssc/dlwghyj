@@ -1,0 +1,1 @@
+////  SeasonWin.h//  dianliwangguomanyouji////  Created by szsycx on 3/17/15.////#ifndef __dianliwangguomanyouji__SeasonWin__#define __dianliwangguomanyouji__SeasonWin__#include "cocos2d.h"USING_NS_CC;class SeasonWin :public Layer{public:    virtual bool init();    CREATE_FUNC(SeasonWin);};#endif /* defined(__dianliwangguomanyouji__SeasonWin__) */
