@@ -1,14 +1,1 @@
-//
-//  DapengcheScene.h
-//  dianliwangguomanyouji
-//
-//  Created by szsycx on 9/15/15.
-//
-//
-
-#ifndef __dianliwangguomanyouji__DapengcheScene__
-#define __dianliwangguomanyouji__DapengcheScene__
-
-#include <stdio.h>
-
-#endif /* defined(__dianliwangguomanyouji__DapengcheScene__) */
+////  DapengcheScene.h//  dianliwangguomanyouji////  Created by szsycx on 9/15/15.////#ifndef __dianliwangguomanyouji__DapengcheScene__#define __dianliwangguomanyouji__DapengcheScene__#include <stdio.h>using namespace cocos2d::ui;USING_NS_CC;class DapengcheScene:public Layer{public:    virtual bool init();    CREATE_FUNC(DapengcheScene);    static Scene* createScene();    float mTime;    void updateTime(float dt);private:    Sprite * logo1;    Sprite * logo2;    Sprite * carBg;    Sprite * car;};#endif /* defined(__dianliwangguomanyouji__DapengcheScene__) */

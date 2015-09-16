@@ -1,9 +1,1 @@
-//
-//  DapengcheScene.cpp
-//  dianliwangguomanyouji
-//
-//  Created by szsycx on 9/15/15.
-//
-//
-
-#include "DapengcheScene.h"
+////  DapengcheScene.cpp//  dianliwangguomanyouji////  Created by szsycx on 9/15/15.////#include "MenuScene.h"#include "DapengcheScene.h"Scene* DapengcheScene::createScene(){    Scene * scene= Scene::create();    Layer * layer = DapengcheScene::create();    scene->addChild(layer);    return scene;}bool DapengcheScene::init(){    if(!Layer::init()){        return false;    }    Size visibleSize = Director::getInstance()->getVisibleSize();    logo2 = Sprite::create("logo2.jpg");    logo2->setPosition(Vec2(visibleSize.width/2.0,visibleSize.height/2.0));    auto fadeOut = FadeOut::create(2);    logo2->runAction(fadeOut);        carBg = Sprite::create("dapengcheBg");    carBg->setPosition(Vec2(visibleSize.width/2.0,visibleSize.height/2.0));    this->addChild(carBg);        car = Sprite::create("dapengche.png");    car->setPosition(Vec2(0,visibleSize.height*5.05/10.0));    this->addChild(car);    this->addChild(logo2);    schedule(schedule_selector(DapengcheScene::updateTime),1.0/60.0);    return true;}void DapengcheScene::updateTime(float dt){    mTime+=dt;    if(mTime>3.0&&logo2->isVisible()){                logo2->setVisible(false);        auto moveBy = MoveBy::create(3, Vec2(1000,0));        car->runAction(moveBy);    }    if(!logo2->isVisible()){        if(car->getPosition().x>800){            auto scene = MenuScene::createScene();            auto director = Director::getInstance();            director->replaceScene(scene);        }    }}
